@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.4%;
+    --hue: 194;
+
+    --bg-color: #000;
+    --tableHeadClr: hsla(194, 72%, 13%, 1);
+    --tableCellClr: hsla(195, 61%, 6%, 0.5);
+    --tableCellClr2:hsla(192, 65%, 7%, 1);
+    --btnClr: rgba(6, 94, 124, 1);
+    --removeBtn:rgba(247, 90, 104, 1);
+    --fontColor: rgba(225, 225, 230, 1);
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    padding: 11.5rem 0 0 0;
+    
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0,);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+#app{
+    max-width: 1120px;
+    margin: 0 auto;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    height: 48px;
+    width: 17rem;
+    
+    border-radius: 5px;
+    
+
+    background-color: var(--btnClr);
+    color: #FFF;
+    border: none;
+
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    text-transform: uppercase;
+
+}
+
+
+
+
+.search button:hover, svg path{
+    background-color: #FFF;
+    color: var(--btnClr);
+    fill: #c0c0eb;
+}
+
+
+
+
+/* svg path{
+    fill: white;
+}
+
+header button:hover, svg path {
+    background-color: #FFF;
+    color: var(--btnClr);
+    fill: var(--btnClr);
+    
+    
+} */
+
+.search{
+    display: flex;
+    gap: .8rem;
+    
+}
+header input{
+    width: 46rem;
+    height: 48px;
+    padding: 0 1.6rem;
+    border-radius: 5px;
+    background-color: #06181C;
+    border: none;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: white;
+
+}
+
+
+table {
+    
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    /* box-shadow: 0 0 0 .2rem #4A808C; */
+    
+}
+
+
+table *{
+
+    color: var(--fontColor);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 160%;
+    color: var(--fontColor);
+}
+
+
+table th{
+    height: 6.4rem;
+    background: var(--tableHeadClr);
+    text-align: left;
+    line-height: 160%;
+    
+}
+
+
+
+thead th:first-child{
+    padding: 0 0 0 4.0rem;
+}
+
+table tr:nth-child(even){
+    background: var(--tableCellClr2);
+}
+
+table tr:nth-child(odd){
+    background: var(--tableCellClr);
+}
+
+
+
+tr td{
+    padding: 2.4rem 0;
+    height: 104px;
+    border-bottom: 1px solid hsla(191, 31%, 42%, 1);
+    
+}
+
+td.user:first-child{
+    padding: 0 0 0 4.0rem;
+}
+
+
+td.user{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    
+}
+
+
+td.user img{
+    border-radius: 50%;
+    width: 5.5rem
+}
+
+td.user a{
+    text-decoration: none;
+    margin-bottom: .8rem;
+}
+
+
+td.user span{
+    color: var(--fontColor);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 160%;
+}
+
+td.remove button{
+    background-color: transparent;
+    border: none;
+    color: var(--removeBtn);
+}
+
+td.remove button:hover{
+    cursor: pointer;
+}
+
+.container{
+    margin-top:8.5rem;
+    height: 60rem;
+    overflow-y: scroll;
+    border-radius: 1.2rem;
+    border: 2px solid #4A808C;
+    background-color: hsla(192, 63%, 3%, 1);
+    
+    
+    
+}
+
+.nocontent{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    text-align: center;
+    
+    color: #4E5455;
+    
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.container::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+.container::-webkit-scrollbar-thumb {
+    background: #4A808C;
+    border-radius: 10px;
+}
+
+.hide{
+    display: none;
+}
